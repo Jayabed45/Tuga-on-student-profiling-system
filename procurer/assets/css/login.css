@@ -1,0 +1,250 @@
+body::-webkit-scrollbar {
+    display: none; /* Hides the scroll bar */
+}
+
+/* Navbar styles */
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    text-decoration: none;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: center center no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Header Animation */
+header {
+    opacity: 0;
+    animation: fadeInDown 1.5s forwards;
+}
+
+/* Video Background Section */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(70%);
+}
+
+.video-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: background-color 0.5s ease;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.video-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: slideInUp 2s forwards;
+}
+
+.video-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    animation: slideInUp 2.5s forwards;
+}
+
+.video-content a {
+    margin-top: 20px;
+    animation: slideInUp 3s forwards;
+    transition: transform 0.3s;
+}
+
+.video-content a:hover {
+    transform: scale(1.1);
+}
+
+/* Logo */
+.logo {
+    opacity: 0;
+    transform: scale(0.5); /* Start smaller */
+    animation: logoFadeIn 1s forwards; /* Animation */
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start smaller */
+    }
+    50% {
+        opacity: 0.7; /* Midway opacity */
+        transform: scale(1.1); /* Slightly grow */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Original size */
+    }
+}
+
+/* Card styles */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.7s forwards;
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    padding: 30px;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Subtle gradient */
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.5s forwards;
+}
+
+.form-container h2,
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Darker text color */
+    font-weight: bold;
+}
+
+.form-group {
+    position: relative; /* For positioning the icon */
+}
+
+.form-control {
+    border-radius: 10px; /* More rounded */
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    padding-left: 40px; /* Space for the icon */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Change to a different color for focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Change to the same color */
+}
+
+.form-control::placeholder {
+    color: #aaa; /* Placeholder color */
+}
+
+/* Icon for input fields */
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745; /* Green color */
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker green */
+    border-color: #218838;
+}
+
+.navbar-toggler {
+    background-color: #007bff; /* Change toggle button color */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+}

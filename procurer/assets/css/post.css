@@ -1,0 +1,153 @@
+        /* Main layout for the post form */
+        .main-content {
+            margin-left: 250px;
+            padding: 40px;
+            width: calc(100% - 250px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align to the left for desktop */
+        }
+
+        .post-container {
+            background-color: #1f1f2e;
+            padding: 30px;
+            width: 1000px; /* Fixed width for desktop */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .post-header img {
+            width: 60px; /* Profile image size */
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .post-body {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px; /* Slightly larger font */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            resize: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        /* Post footer */
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Styling for displaying posts */
+        .posts {
+            margin-top: 40px;
+            width: 800px; /* Fixed width for posts */
+        }
+
+        /* Individual post item styling */
+        .post-item {
+            background-color: #2a2a3b;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            width: 125%; /* Full width */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            border: 1px solid #444; 
+        }
+
+        /* Styling for the post content */
+        .post-item .post-content {
+            font-size: 16px;
+            color: #ccc;
+            text-align: left; /* Align text to the left */
+            padding: 10px;
+            background-color: #3a3a4d;
+            margin-bottom: 15px;
+        }
+
+        /* Center the image */
+        .post-item img {
+            display: block;
+            margin: 10px 0; /* Center the image */
+            max-width: 100%; /* Responsive image */
+            border-radius: 8px;
+        }
+
+        /* Button styles */
+        .post-footer button {
+            background-color: #1da1f2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .post-footer button:hover {
+            background-color: #0d8bce;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            margin-left: auto; /* Align to the right */
+        }
+/* Dropdown button styles */
+.dropdown-button {
+    background-color: #1da1f2; /* Main button color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Positioning for dropdown */
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned below the dropdown button */
+    background-color: #fff; /* Background color */
+    min-width: 160px; /* Minimum width */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1; /* Positioned on top */
+}
+
+/* Individual dropdown item styles */
+.dropdown-content a {
+    color: #333; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Background on hover */
+}
+
+/* Show class to display the dropdown */
+.show {
+    display: block; /* Show dropdown when active */
+}

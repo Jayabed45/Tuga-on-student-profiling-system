@@ -1,0 +1,25 @@
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.post h3 {
+    margin: 0 0 10px;
+}
+.post p {
+    margin: 0;
+    color: #555;
+}
+.post .admin {
+    font-size: 0.9em;
+    color: #777;
+}
+.admin-img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Round image */
+    margin-right: 10px; /* Space between image and name */
+    vertical-align: middle; /* Aligns with text */
+}
